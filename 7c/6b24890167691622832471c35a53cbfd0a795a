@@ -1,0 +1,23 @@
+README.md
+  s_53ba6c04369d80::t_cdc9d837067a13 1,3,5,7,9,11,13-14,16,18,20,22,24,26,28-36,38,40,42,44,46,48,50,52
+RELEASE_NOTES.md
+  s_53ba6c04369d80::t_cdc9d837067a13 3,5,7,9,11
+SHA256SUMS.txt
+  s_53ba6c04369d80::t_ee135fcd039c35 2-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7c6b24890167691622832471c35a53cbfd0a795a",
+  "prompts": {},
+  "sessions": {
+    "s_53ba6c04369d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16ca3-f0f0-70f3-8fa4-3705852d285e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zack24680 <193324477+Zack24680@users.noreply.github.com>"
+    }
+  }
+}
