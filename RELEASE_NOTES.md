@@ -1,15 +1,11 @@
 # Capri v1.0.0
 
-First public release of the approved soft, rounded Capri companion.
+Capri is a soft, rounded custom pet for Codex desktop, with nine animation states and sixteen gaze directions.
 
-- Nine animation states and sixteen clockwise gaze directions.
-- Transparent V2 atlas plus a lossless V1 compatibility sheet.
-- A local player, three browser screenshots and a recorded browser playback demo.
-- Per-state GIFs, all-state GIF/MP4, native jump loop, look loop, contact sheets and labeled stills.
-- Selected generated source strips, source notes, measured motion details and portable validation reports.
+**[Download capri.png](https://github.com/Zack24680/capri-pet/releases/download/v1.0.0/capri.png)** — this is the only file needed to install Capri.
 
-The V2 sprite sheet passed structural validation, the final quality gate and Pets preflight. Five subtle intermediate gaze warnings and the reviewed continuity/negative-space warnings remain disclosed in the documentation. The final visuals were accepted by the owner.
+Open **Settings > Pets > Create pet** in Codex desktop, attach the PNG in the chat that opens, and ask Codex to install it as Capri using the existing v2 sprite sheet. Then refresh **Settings > Pets** and choose Capri.
 
-The demo records the included local player. It is not a recording or performance benchmark of the ChatGPT desktop overlay. No dialogue or voice engine is installed by these assets.
+See the [README](https://github.com/Zack24680/capri-pet#install-in-codex) for the installation prompt and GIF previews.
 
-Download the ZIP below for the complete package. The individual V2 PNG, V1 PNG, MP4 recording and checksum file are also attached. For import guidance and complete details, see the [README](https://github.com/Zack24680/capri-pet#readme).
+The transparent v2 sheet is 1536 × 2288 pixels. It passed structural validation, the quality gate and Pets preflight. Reviewed gaze and continuity warnings are documented in the [validation notes](https://github.com/Zack24680/capri-pet/blob/main/docs/validation.md).
