@@ -1,0 +1,240 @@
+{
+  "media": [
+    {
+      "file": "media/all-states.gif",
+      "bytes": 1805453,
+      "sha256": "942f033fa802f9c9c06a591c5720d68ed9e3a7e6380657d5f661629bae631573",
+      "width": 192,
+      "height": 240,
+      "frames": 114,
+      "duration_ms": 17680
+    },
+    {
+      "file": "media/all-states.mp4",
+      "bytes": 756560,
+      "sha256": "701821328a777d2bb5f641c056720c4ae15abd5ebc954da7959199496038a7da",
+      "codec": "h264",
+      "width": 384,
+      "height": 480,
+      "encoded_frame_rate": "100/1",
+      "duration_seconds": 17.54
+    },
+    {
+      "file": "media/capri-demo.mp4",
+      "bytes": 1201286,
+      "sha256": "51dfe6163e0695964f919e8578997b7392e217a671282e364a7ec56cc6ce056c",
+      "codec": "h264",
+      "width": 1280,
+      "height": 900,
+      "encoded_frame_rate": "30/1",
+      "duration_seconds": 25.1
+    },
+    {
+      "file": "media/capri-demo.webm",
+      "bytes": 2698124,
+      "sha256": "64e3ef1f15de3f06762f81724bbff41b1b68e2c0f64d11d59d9568745690fcf7",
+      "codec": "vp8",
+      "width": 1280,
+      "height": 900,
+      "encoded_frame_rate": "25/1",
+      "duration_seconds": 28.6
+    },
+    {
+      "file": "media/contact-sheet.png",
+      "bytes": 684841,
+      "sha256": "7bed0e2bb4e90ebf0b8e231aab5e5f4b00fe60cfb09c8309396b41ad7f77deb9",
+      "width": 768,
+      "height": 1386
+    },
+    {
+      "file": "media/demo-filmstrip.png",
+      "bytes": 325265,
+      "sha256": "f73b9f6824acbb7eaa3ff8ff904b91bd6a5ed3b0f82d6df8ff8bc267847fa467",
+      "width": 1280,
+      "height": 940
+    },
+    {
+      "file": "media/gaze-directions.png",
+      "bytes": 742618,
+      "sha256": "7789bc223df404320d6ab24cb10f00501bbc29e7bb5a29b647d48025af3ca36f",
+      "width": 1536,
+      "height": 1170
+    },
+    {
+      "file": "media/idle-jump-idle-native.gif",
+      "bytes": 265102,
+      "sha256": "6734e86ae838b1420e7517b3d894b5dfa22fbddd94ed74cf604833625681a716",
+      "width": 192,
+      "height": 208,
+      "frames": 17,
+      "duration_ms": 3940
+    },
+    {
+      "file": "media/labeled-stills.png",
+      "bytes": 158403,
+      "sha256": "3e5780dff5e1128bdb67bf03dfa502d7bf3e9b9bfcaa778ade75224a5b79e8ab",
+      "width": 576,
+      "height": 480
+    },
+    {
+      "file": "media/look-loop.gif",
+      "bytes": 236212,
+      "sha256": "80f9317b799f8c83c92a2227506a89a8236c21a6b805e94ad02c5b021fbe74e4",
+      "width": 192,
+      "height": 240,
+      "frames": 16,
+      "duration_ms": 3520
+    },
+    {
+      "file": "media/screenshot-demo-end.png",
+      "bytes": 110130,
+      "sha256": "1f6dd3be8afb389a719daa745898f63a836b5d653e731e1c65b9a49de43e659f",
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "file": "media/screenshot-gaze.png",
+      "bytes": 205208,
+      "sha256": "d04deb7bf4a10c729ef67aaec945988cea484b0e2df1aba7138ec51ccf26bad4",
+      "width": 1076,
+      "height": 362
+    },
+    {
+      "file": "media/screenshot-nine-states.png",
+      "bytes": 316208,
+      "sha256": "5d2a448688abe9a0bd149a12ddbe38357a9f2fac518006a86ea6afde4817526f",
+      "width": 1076,
+      "height": 1073
+    },
+    {
+      "file": "media/screenshot-player.png",
+      "bytes": 105648,
+      "sha256": "70c0b4449806f2ab107c4d56c3715762d5da54aaee2ba1bf86206321fcf27f55",
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "file": "media/states/failed.gif",
+      "bytes": 112756,
+      "sha256": "e723111a786734651ca73e0589e592715b9e178ef56b56df258b58786af70bbe",
+      "width": 192,
+      "height": 208,
+      "frames": 8,
+      "duration_ms": 1220
+    },
+    {
+      "file": "media/states/idle.gif",
+      "bytes": 99769,
+      "sha256": "a24fb9f51b5c00212d87ba9d0812d0d5f29e2364976023cbe9abe556997eaba0",
+      "width": 192,
+      "height": 208,
+      "frames": 6,
+      "duration_ms": 1100
+    },
+    {
+      "file": "media/states/jumping.gif",
+      "bytes": 65566,
+      "sha256": "2223924ac234f74eb618e9fab6c74b8f9ee87e6d70d4e2ea0d89ae3da882cde8",
+      "width": 192,
+      "height": 208,
+      "frames": 5,
+      "duration_ms": 840
+    },
+    {
+      "file": "media/states/review.gif",
+      "bytes": 93828,
+      "sha256": "1ab7616df4f8bbe9d5fc0eb685521e5734b03618eaebeb27dcf8364cd4322b73",
+      "width": 192,
+      "height": 208,
+      "frames": 6,
+      "duration_ms": 1030
+    },
+    {
+      "file": "media/states/running-left.gif",
+      "bytes": 118781,
+      "sha256": "46e77bfdf1fee71025471ff624eef794724a54ae29c5b9d412c56c78b097b2ea",
+      "width": 192,
+      "height": 208,
+      "frames": 8,
+      "duration_ms": 1060
+    },
+    {
+      "file": "media/states/running-right.gif",
+      "bytes": 127695,
+      "sha256": "bd875db29e61862f64df389b6a20f6330f479be18920a9403d5db3abcd472455",
+      "width": 192,
+      "height": 208,
+      "frames": 8,
+      "duration_ms": 1060
+    },
+    {
+      "file": "media/states/running.gif",
+      "bytes": 98408,
+      "sha256": "88206286045a79d1ce799057b023cf195c8f1ca27c65d178d3f3d064be8e4085",
+      "width": 192,
+      "height": 208,
+      "frames": 6,
+      "duration_ms": 820
+    },
+    {
+      "file": "media/states/waiting.gif",
+      "bytes": 91239,
+      "sha256": "70406d54d9e52ea3a2cedfee94576977b94f1a4424993b15c314d2e358828970",
+      "width": 192,
+      "height": 208,
+      "frames": 6,
+      "duration_ms": 1010
+    },
+    {
+      "file": "media/states/waving.gif",
+      "bytes": 67020,
+      "sha256": "903ff28189800506d76715e3dac8c0f39548795fd76879b492adb67c106dc2d3",
+      "width": 192,
+      "height": 208,
+      "frames": 4,
+      "duration_ms": 700
+    },
+    {
+      "file": "media/stills/still-failed-04.png",
+      "bytes": 20863,
+      "sha256": "de4166b00872c8d7c253655f7cb6058b1b366bd0a62b2ceb0097df6cb10bf8b2",
+      "width": 192,
+      "height": 240
+    },
+    {
+      "file": "media/stills/still-idle-00.png",
+      "bytes": 31280,
+      "sha256": "855a0cfc4996f51953ac213cada528cb3a574dcefb917e27856e7089d7c99c64",
+      "width": 192,
+      "height": 240
+    },
+    {
+      "file": "media/stills/still-jumping-02.png",
+      "bytes": 25163,
+      "sha256": "5d7aaa972c47bd9a64d85b9ea35ab01b01ba535538b990c6fa7160a902404905",
+      "width": 192,
+      "height": 240
+    },
+    {
+      "file": "media/stills/still-look-270.png",
+      "bytes": 27484,
+      "sha256": "52eba4a3d69a9c23048db56685bb6fe1218951e0b1628e73366489cb62e69abe",
+      "width": 192,
+      "height": 240
+    },
+    {
+      "file": "media/stills/still-review-03.png",
+      "bytes": 27631,
+      "sha256": "c496ef56fafdc4c8e7a87dc37b8e0978eabd5cbb68e4851a18a922621c28335a",
+      "width": 192,
+      "height": 240
+    },
+    {
+      "file": "media/stills/still-waving-02.png",
+      "bytes": 30362,
+      "sha256": "ab659861e37a3ffa2b33fa2df423e8aa48f551f7ab4a5a1d4269771f26e984cc",
+      "width": 192,
+      "height": 240
+    }
+  ]
+}

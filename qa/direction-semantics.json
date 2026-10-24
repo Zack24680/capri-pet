@@ -1,0 +1,103 @@
+{
+  "atlas": "assets/capri.png",
+  "directions": {
+    "000": {
+      "expected": "up",
+      "observed": "up",
+      "evidence": "Both complete whiteblue disk pairs at top of black sockets, empty black below.",
+      "verdict": "pass"
+    },
+    "022.5": {
+      "expected": "up-right",
+      "observed": "up-right",
+      "evidence": "Both high disk pairs with subtle rightward displacement and face flex; horizontal cue close to up anchor.",
+      "verdict": "warning"
+    },
+    "045": {
+      "expected": "up-right",
+      "observed": "up-right",
+      "evidence": "Both disk pairs high in right half of sockets; horizontal component remains subtle, face flex follows right.",
+      "verdict": "warning"
+    },
+    "067.5": {
+      "expected": "up-right",
+      "observed": "up-right",
+      "evidence": "Both disk pairs near right edge and slightly above socket middle, black crescent left/below.",
+      "verdict": "pass"
+    },
+    "090": {
+      "expected": "right",
+      "observed": "right",
+      "evidence": "Both blue-white disk pairs at right of black sockets, conspicuous empty black crescent left.",
+      "verdict": "pass"
+    },
+    "112.5": {
+      "expected": "down-right",
+      "observed": "down-right",
+      "evidence": "Both disk pairs right and slightly below socket middle, empty black above-left.",
+      "verdict": "pass"
+    },
+    "135": {
+      "expected": "down-right",
+      "observed": "down-right",
+      "evidence": "Both low-right blue-white pairs, empty black upper-left; face softly dips.",
+      "verdict": "pass"
+    },
+    "157.5": {
+      "expected": "down-right",
+      "observed": "down-right",
+      "evidence": "Both low disks approach down anchor, slight right cue and right face flex; horizontal cue is subtle.",
+      "verdict": "warning"
+    },
+    "180": {
+      "expected": "down",
+      "observed": "down",
+      "evidence": "Both complete blue-white pairs at bottom of sockets, large empty black above.",
+      "verdict": "pass"
+    },
+    "202.5": {
+      "expected": "down-left",
+      "observed": "down-left",
+      "evidence": "Both disk pairs low with leftward offset within black sockets; small left component near down anchor.",
+      "verdict": "warning"
+    },
+    "225": {
+      "expected": "down-left",
+      "observed": "down-left",
+      "evidence": "Both disk pairs below and left of socket center, empty black upper-right.",
+      "verdict": "pass"
+    },
+    "247.5": {
+      "expected": "down-left",
+      "observed": "down-left",
+      "evidence": "Both disk pairs against left part of sockets and slightly below middle, empty black right/above.",
+      "verdict": "pass"
+    },
+    "270": {
+      "expected": "left",
+      "observed": "left",
+      "evidence": "Both complete blue-white disk pairs at left of black sockets, conspicuous empty black crescents right. No missing eye.",
+      "verdict": "pass"
+    },
+    "292.5": {
+      "expected": "up-left",
+      "observed": "up-left",
+      "evidence": "Both disk pairs left and slightly above socket middle, empty black lower-right.",
+      "verdict": "pass"
+    },
+    "315": {
+      "expected": "up-left",
+      "observed": "up-left",
+      "evidence": "Both disk pairs upper-left within sockets, face follows upward, empty black lower-right.",
+      "verdict": "pass"
+    },
+    "337.5": {
+      "expected": "up-left",
+      "observed": "up-left",
+      "evidence": "Both disk pairs high with small left offset, empty black below-right; head lifts toward000.",
+      "verdict": "warning"
+    }
+  },
+  "review": "Coordinator labeled native-size and magnified review, followed by explicit owner acceptance of final motion after repaired gaze rows. No independent reviewer panel was used.",
+  "registration": "Bundled assembler initially registered row9 before row10 generation. Row10 raised-head endpoint exceeded that provisional transform. Used the same bundled assembler joint raw-row path to recompute one shared transform across all16, preserving order, body anchor and shared scaling. No per-cell resizing or retouching."
+}

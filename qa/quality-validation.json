@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "atlas": "assets/capri.png",
+  "encoded_bytes": 2414151,
+  "sha256": "cfd4a14f51dde57049bad38da9cd5e65f5434466256edfa339d0ac5f3f4d0ae6",
+  "jump": {
+    "idle_baseline": 202,
+    "jump_baselines": [
+      202,
+      193,
+      164,
+      202,
+      202
+    ],
+    "airborne_lift_pixels": 38,
+    "landing_delta_pixels": 0
+  },
+  "look_registration": {
+    "neutral_center_x": 95.0,
+    "look_centers_x": [
+      100.0,
+      100.0,
+      99.5,
+      99.5,
+      100.0,
+      99.5,
+      99.5,
+      99.5,
+      99.5,
+      100.5,
+      101.0,
+      99.5,
+      101.5,
+      99.5,
+      100.5,
+      99.0
+    ],
+    "look_widths": [
+      132,
+      130,
+      131,
+      131,
+      132,
+      131,
+      131,
+      131,
+      137,
+      133,
+      134,
+      133,
+      137,
+      133,
+      133,
+      130
+    ],
+    "maximum_center_drift_pixels": 6.5,
+    "maximum_width_ratio": 1.0538461538461539
+  },
+  "errors": [],
+  "warnings": [
+    "look direction 022.5 accepted with a reviewed warning",
+    "look direction 045 accepted with a reviewed warning",
+    "look direction 157.5 accepted with a reviewed warning",
+    "look direction 202.5 accepted with a reviewed warning",
+    "look direction 337.5 accepted with a reviewed warning",
+    "180 has transparent interior hole rows (y=117)",
+    "247.5 has transparent interior hole rows (y=117)",
+    "067.5->090 diff is a local outlier (1097 pixels vs neighbor average 686)",
+    "157.5->180 diff is a local outlier (2808 pixels vs neighbor average 1056)",
+    "337.5->000 diff is a local outlier (3279 pixels vs neighbor average 1800)"
+  ]
+}

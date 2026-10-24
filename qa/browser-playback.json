@@ -1,0 +1,24 @@
+{
+  "recording": "media/capri-demo.webm",
+  "viewport": [
+    1280,
+    900
+  ],
+  "tested_states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "look_cells": 16,
+  "pause_resume": "passed",
+  "native_and_double_scale": "passed",
+  "page_errors": [],
+  "failed_requests": [],
+  "scope": "Isolated local browser playback of the published atlas. Not a ChatGPT app runtime capture or a frame-rate benchmark."
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Capri: a soft animated digital companion. Preview nine animation states and sixteen gaze directions."
+    />
+    <title>Capri — animated companion</title>
+    <link rel="stylesheet" href="preview/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">ANIMATED COMPANION · V1.0.0</p>
+        <h1>Capri<span>Curious. Cocky. A little weightless.</span></h1>
+        <p class="intro">
+          A soft, rounded digital imp with elastic reactions, flowing pink curls
+          and a mischievous grin.
+        </p>
+        <nav aria-label="Resources">
+          <a href="assets/capri.png" download>Sprite sheet</a
+          ><a href="media/capri-demo.mp4">Recorded demo</a
+          ><a href="README.md">Documentation</a>
+        </nav>
+      </header>
+      <section class="showcase" aria-labelledby="player-title">
+        <div class="stage">
+          <canvas
+            id="pet"
+            width="192"
+            height="208"
+            aria-label="Animated Capri sprite preview"
+          ></canvas>
+        </div>
+        <div class="controls">
+          <p class="eyebrow">LIVE SPRITE PLAYBACK</p>
+          <h2 id="player-title">Idle</h2>
+          <p id="motion">Loading the approved transparent sprite sheet…</p>
+          <p class="frame" id="frame" aria-live="off"></p>
+          <label for="state">Animation</label
+          ><select id="state"></select>
+          <div class="buttons">
+            <button id="pause" type="button">Pause</button
+            ><button id="tour" type="button">Play showcase</button>
+          </div>
+          <label for="scale">Display scale</label
+          ><select id="scale">
+            <option value="1">1× · native 192 × 208</option>
+            <option value="2">2× · enlarged preview</option>
+          </select>
+          <p class="note">
+            The player renders the published atlas directly. It demonstrates the
+            artwork; it is not a recording of the ChatGPT desktop app.
+          </p>
+        </div>
+      </section>
+      <section id="states" aria-labelledby="states-title">
+        <h2 id="states-title">Nine ways to react</h2>
+        <div id="state-grid" class="state-grid"></div>
+      </section>
+      <section aria-labelledby="look-title">
+        <h2 id="look-title">A complete look around</h2>
+        <p>
+          Sixteen directions, clockwise: up → right → down → left. Some
+          intermediate glances are deliberately subtle.
+        </p>
+        <div id="look-grid" class="look-grid"></div>
+      </section>
+      <footer>
+        Generated artwork · 73 populated cells · 192 × 208 per cell · 9
+        animation states + 16 gaze poses<br />Fan-made adaptation. Source
+        references, provenance and review notes are in the documentation.
+      </footer>
+    </main>
+    <script src="preview/metadata.js"></script>
+    <script src="preview/player.js"></script>
+  </body>
+</html>
