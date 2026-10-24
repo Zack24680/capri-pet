@@ -1,0 +1,71 @@
+scripts/build_release.py
+  s_53ba6c04369d80::t_63f64347b0188f 1-64
+.gitignore
+  s_53ba6c04369d80::t_6514ddf7af38d2 1-6
+README.md
+  s_53ba6c04369d80::t_3e539076a266d7 1-117
+RELEASE_NOTES.md
+  s_53ba6c04369d80::t_84d893a0689395 1-15
+SHA256SUMS.txt
+  s_53ba6c04369d80::t_f239170ef048ed 1-66
+docs/character-and-motion.md
+  s_53ba6c04369d80::t_359bfd564de644 1-39
+docs/media-inventory.md
+  s_53ba6c04369d80::t_74a39fc18017af 1-37
+docs/validation.md
+  s_53ba6c04369d80::t_b4cb5ce5329049 1-48
+index.html
+  s_53ba6c04369d80::t_8c7e3aad5d7907 1-80
+metadata.json
+  s_53ba6c04369d80::t_d3acb82f9d2396 1-283
+preview/metadata.js
+  s_53ba6c04369d80::t_d1e28ee08534c9 1-283
+preview/player.js
+  s_53ba6c04369d80::t_0ff8a10bad8e60 1-152
+preview/style.css
+  s_53ba6c04369d80::t_d674feb9cbf876 1-245
+qa/atlas-validation-v1.json
+  s_53ba6c04369d80::t_95395b85b111d4 1-666
+qa/atlas-validation.json
+  s_53ba6c04369d80::t_075df2b9da150b 1-810
+qa/browser-playback.json
+  s_53ba6c04369d80::t_e56c3c2871853c 1-24
+qa/direction-continuity.json
+  s_53ba6c04369d80::t_0055a6a3b7b622 1-180
+qa/direction-semantics.json
+  s_53ba6c04369d80::t_65afe464e42c78 1-103
+qa/media-inventory.json
+  s_53ba6c04369d80::t_7d6e76a2a95e36 1-240
+qa/pets-preflight.json
+  s_53ba6c04369d80::t_aaec810cbfa2da 1-24
+qa/quality-validation.json
+  s_53ba6c04369d80::t_c1c376cd2263fc 1-72
+scripts/capture_demo.py
+  s_7f198d25ea2b9c::t_76977d38903942 1-85
+scripts/verify_assets.py
+  s_53ba6c04369d80::t_70d0a8c1b4f86b 1-98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c51becd3203f7df4cbdb97070c3a447e7cc520b",
+  "prompts": {},
+  "sessions": {
+    "s_53ba6c04369d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16ca3-f0f0-70f3-8fa4-3705852d285e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zack24680 <193324477+Zack24680@users.noreply.github.com>"
+    },
+    "s_7f198d25ea2b9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15728-b9a1-7d80-933d-9923af131b08",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zack24680 <193324477+Zack24680@users.noreply.github.com>"
+    }
+  }
+}
