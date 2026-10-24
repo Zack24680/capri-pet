@@ -23,8 +23,6 @@ Use your ChatGPT/Codex client's custom-pet import or upload flow and supply the 
 
 The [recorded demo](media/capri-demo.mp4) shows the included player displaying the exact published atlas in an isolated browser. It cycles through every standard state twice, then all sixteen gaze poses. This is a real browser playback recording, **not a capture of the ChatGPT desktop overlay** and not a runtime benchmark of that app.
 
-The player is also included: download the repository and open [`index.html`](index.html), or run `python3 -m http.server 8000` from its folder and visit `http://localhost:8000`. It has animation selection, pause/resume, native/2× display and a showcase tour. No build step, npm dependencies, account or API key is needed.
-
 ![Timestamped stills from the recorded browser demo](media/demo-filmstrip.png)
 
 ![All standard animation states](media/all-states.gif)
