@@ -2,7 +2,7 @@
 
 A soft, rounded fan-made Capri companion: flowing hot-pink curls, a tiny flexible body, expressive green-and-blue eyes and a mischievous grin.
 
-**9 animation states · 16 gaze directions · transparent v2 sprite sheet · recorded playback demo**
+**9 animation states · 16 gaze directions · transparent v2 sprite sheet**
 
 ![Capri waving](media/states/waving.gif) ![Capri jumping](media/states/jumping.gif) ![Capri looking around](media/look-loop.gif)
 
@@ -11,19 +11,13 @@ A soft, rounded fan-made Capri companion: flowing hot-pink curls, a tiny flexibl
 - **[Download the complete release](https://github.com/Zack24680/capri-pet/releases/latest)** for artwork, motion previews, source strips, screenshots and validation.
 - **[V2 sprite sheet](assets/capri.png)** — `1536 × 2288`, nine animation rows plus sixteen gaze poses. Choose **Raw / Download raw file** on GitHub to save the original PNG.
 - **[V1 compatibility sheet](assets/capri-v1.png)** — `1536 × 1872`, the same first nine rows, without gaze poses. Use this only when your importer explicitly requires the older nine-row layout.
-- **[Watch the recorded browser demo](media/capri-demo.mp4)** · [WebM capture](media/capri-demo.webm) · [compact animation video](media/all-states.mp4)
+- **[Watch the animation video](media/all-states.mp4)**
 
 Use your ChatGPT/Codex client's custom-pet import or upload flow and supply the matching transparent sprite sheet. Client support and storage differ: some clients accept uploaded sheets, while desktop custom-pet workflows may create locally installed pets. The [official Pets documentation](https://learn.chatgpt.com/docs/pets?surface=app) describes the available controls. The V2 sheet was accepted by the Pets integration used for this project; support in every client is not claimed.
 
 `metadata.json` describes this project's atlas and playback timings. It is portable project metadata, **not** a guessed native `pet.json` configuration file. Installing the sprite does not install a character chatbot, dialogue script or voice.
 
 ## See Capri move
-
-![Recorded player screenshot](media/screenshot-player.png)
-
-The [recorded demo](media/capri-demo.mp4) shows the included player displaying the exact published atlas in an isolated browser. It cycles through every standard state twice, then all sixteen gaze poses. This is a real browser playback recording, **not a capture of the ChatGPT desktop overlay** and not a runtime benchmark of that app.
-
-![Timestamped stills from the recorded browser demo](media/demo-filmstrip.png)
 
 ![All standard animation states](media/all-states.gif)
 
@@ -77,7 +71,7 @@ The mouth is a single changing white glyph, without individually divided teeth. 
 
 The final sheet passed the bundled structural validator, the pet quality gate and the Pets preflight. Name/description and successful creation were separately verified in the owner's collection; private account identifiers and upload sessions are not part of this repository.
 
-The nine-state GIF contains **114 playback frames over 17.68 seconds**, showing each cycle twice. The look GIF contains **16 frames over 3.52 seconds**. The smaller all-state MP4 is a re-encoding of the GIF; container timing differs slightly. Browser screenshots and the larger recorded demo come from the included static player. File sizes and media properties are reported in [media inventory](docs/media-inventory.md). No CPU, memory, engine latency or host-app FPS benchmark is claimed.
+The nine-state GIF contains **114 playback frames over 17.68 seconds**, showing each cycle twice. The look GIF contains **16 frames over 3.52 seconds**. The all-state MP4 is a re-encoding of the GIF; container timing differs slightly. Browser screenshots come from the included static player. File sizes and media properties are reported in [media inventory](docs/media-inventory.md). No CPU, memory, engine latency or host-app FPS benchmark is claimed.
 
 To verify the download locally:
 
@@ -86,15 +80,7 @@ python3 -m pip install Pillow
 python3 scripts/verify_assets.py
 ```
 
-To recreate the isolated browser screenshots and recording (optional):
-
-```sh
-python3 -m pip install playwright
-python3 -m playwright install chromium
-python3 scripts/capture_demo.py
-```
-
-The capture script uses an isolated browser context and a loopback-only static server. The server closes when capture finishes. See [validation notes](docs/validation.md) for the recorded checks and limitations.
+See [validation notes](docs/validation.md) for the recorded checks and limitations.
 
 ## Repository map
 
