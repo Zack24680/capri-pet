@@ -1,0 +1,21 @@
+README.md
+  s_53ba6c04369d80::t_cdf1e76262097c 5,14,74,83
+SHA256SUMS.txt
+  s_53ba6c04369d80::t_58df1b641fa7d2 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cce5e9887a4c3e14404c4ccb25db8346d73b730f",
+  "prompts": {},
+  "sessions": {
+    "s_53ba6c04369d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16ca3-f0f0-70f3-8fa4-3705852d285e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zack24680 <193324477+Zack24680@users.noreply.github.com>"
+    }
+  }
+}
