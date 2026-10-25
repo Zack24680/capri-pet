@@ -7,6 +7,7 @@ import re
 from urllib.parse import unquote
 
 from PIL import Image
+from verify_native import verify_native
 
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED = {".git", ".capture", "dist", "__pycache__", ".venv"}
@@ -17,6 +18,7 @@ def public_files():
 
 
 def verify():
+    native = verify_native()
     metadata = json.loads((ROOT / "metadata.json").read_text())
     sprite = ROOT / metadata["sprite"]["file"]
     digest = hashlib.sha256(sprite.read_bytes()).hexdigest()
@@ -89,7 +91,7 @@ def verify():
             assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, name
             entries[name] = expected
         assert set(entries) == {str(p.relative_to(ROOT)) for p in public_files() if p != checksums}
-    return {"ok": True, "sprite_sha256": digest, "required_cells": used, "transparent_unused_cells": unused,
+    return {"ok": True, "native": native, "legacy_sprite_sha256": digest, "legacy_required_cells": used, "legacy_transparent_unused_cells": unused,
             "lossless_v1_crop": True, "state_gifs": 9, "look_frames": 16,
             "local_markdown_links": "passed", "private_content_scan": "passed", "checksums": checksums.exists()}
 

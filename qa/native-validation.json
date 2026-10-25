@@ -1,0 +1,150 @@
+{
+  "ok": true,
+  "version": "2.0.0",
+  "atlas_sha256": "9e4078770ba46cd997e9fffebb6e8c4945b58a40edf224a5db855a75ca4b145c",
+  "atlas_bytes": 17671022,
+  "atlas_size": [
+    3072,
+    7280
+  ],
+  "action_states": 9,
+  "unique_action_cells": 540,
+  "frames_per_action": 60,
+  "configured_fps": 60,
+  "action_cycle_ms": 1000,
+  "gaze_cells_retained_exact": 16,
+  "unused_cells_transparent": 4,
+  "negative_controls": {
+    "fps": "rejected",
+    "index": "rejected",
+    "geometry": "rejected",
+    "missing_state": "rejected",
+    "duplicate": "rejected",
+    "fallback": "rejected"
+  },
+  "gifs": [
+    {
+      "file": "media/60fps/idle.gif",
+      "bytes": 1715254,
+      "sha256": "1b960e95fd66294ecd74fd5986bc4addb09031a2bf948ff4da9d6b31d7ca8093",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/running-right.gif",
+      "bytes": 1824486,
+      "sha256": "c3d89b27b1d011322eb4667c32623c74fc9a086a8ca011e5e0489ba62ea1fb43",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/running-left.gif",
+      "bytes": 1668921,
+      "sha256": "e0af8d1828da89018581a43bf85111d6e623a9f84b4743c176d11cb154875ba6",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/waving.gif",
+      "bytes": 1696424,
+      "sha256": "865ad203d9be815ae556af73a35c1ec7584a341ca9fa99690f32353bf3dc587c",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/jumping.gif",
+      "bytes": 1925368,
+      "sha256": "4bbbb851cd05bf24cd33c8c845476bb256359502952e8774228c4584b117ab1b",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/failed.gif",
+      "bytes": 2030296,
+      "sha256": "e50574c543c0ed9d20b3533cdcaa5b3ef570ce5c5881bdd327f3703d572e5b91",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/waiting.gif",
+      "bytes": 2127424,
+      "sha256": "cc1429df98e978fef170efcaba299964691561d10560dad7e2b46301803d6950",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/running.gif",
+      "bytes": 2004491,
+      "sha256": "f1313134c1d311569afb6de5f2b11e00ce29432e79ca3aa1cdd7734df137106a",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/review.gif",
+      "bytes": 2009988,
+      "sha256": "3c203c198f25c5929dedf1008e22530b4ff96fbcd604bd405ae870226e3cadab",
+      "dimensions": [
+        384,
+        416
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    },
+    {
+      "file": "media/60fps/all-actions.gif",
+      "bytes": 4769839,
+      "sha256": "1a5cacbdc839e4bbe9bb26c324c59c2fcc0c1b671c602085802de32fcba7a80d",
+      "dimensions": [
+        576,
+        696
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50
+    }
+  ],
+  "native_fps_measured": false,
+  "pointer_mapping_verified": false,
+  "cli_256_cell_contract_compatible": false
+}

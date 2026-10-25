@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "format": "codex-desktop-custom-tracks",
+  "installFolder": "capri",
+  "manifest": "capri/pet.json",
+  "atlas": "capri/spritesheet.webp",
+  "atlasSha256": "9e4078770ba46cd997e9fffebb6e8c4945b58a40edf224a5db855a75ca4b145c",
+  "actionStates": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "framesPerAction": 60,
+  "configuredFps": 60,
+  "cycleMs": 1000,
+  "gazeCells": [
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555
+  ],
+  "gazePointerMappingVerified": false
+}

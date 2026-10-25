@@ -1,48 +1,44 @@
 # Validation and review
 
-## Published bytes
+## Current release: v2.0.0
 
-The V2 sheet is the exact PNG accepted by the owner after inspecting the final motion:
+The native package uses [pet.json](../capri/pet.json) and a lossless [WebP atlas](../capri/spritesheet.webp). The atlas is the same encoded artwork supplied in the accepted motion candidate:
 
-- Dimensions: 1536 × 2288; RGBA; 2,414,151 bytes.
-- SHA-256: `cfd4a14f51dde57049bad38da9cd5e65f5434466256edfa339d0ac5f3f4d0ae6`.
-- Eight columns and eleven rows with 192 × 208 cells.
-- 73 required populated cells; 15 unused cells fully transparent.
+- Dimensions: 3072 × 7280; sixteen columns and thirty-five rows of 192 × 208 cells.
+- Encoded size: 17,671,022 bytes.
+- SHA-256: `9e4078770ba46cd997e9fffebb6e8c4945b58a40edf224a5db855a75ca4b145c`.
+- Cells 0–539: nine actions with 60 distinct frames each; 540 unique action frames in total.
+- Cells 540–555: sixteen original gaze drawings, retained pixel-exact.
+- Cells 556–559: fully transparent unused cells.
 
-The V1 compatibility file is a lossless crop of rows 0–8 from these exact bytes. It contains the same 57 standard poses and omits the sixteen look poses. Its own structural validation is saved separately.
+Every action track has 60 frames at 60 fps, for a one-second cycle. Greeting, lift, failure and review play once with an idle fallback. Idle, directional glides, input and work loop. The release manifest has separate tracks for these behaviors; it is not the temporary diagnostic tour.
 
-## Checks performed
+## Artwork and timing checks
 
-1. Every standard source strip passed bundled connected-pose extraction and immediate inspection; the combined standard frame review also passed.
-2. Four cardinal anchors were inspected before the sweep. The gaze rows were generated as coherent eight-pose groups and reviewed in fixed clockwise order.
-3. Registration used one common transform across the final sixteen look poses, including the lifted-head endpoint. Individual final cells were not resized or retouched to conceal failures.
-4. A single chroma-edge cleanup pass was applied to the final newly assembled raw revision. Exact encoded bytes passed the structural validator and quality gate.
-5. The Pets service returned `valid: true` for the same V2 file. Creation and listing were verified; private service/account identifiers are excluded from publication.
-6. All-state, per-state, native jump and look previews were rendered from the final encoded atlas. The owner explicitly accepted the final visual result after gaze repairs. This was coordinator review plus owner inspection, not an independent reviewer panel.
-7. The public player is checked in an isolated browser: all nine state selectors, sixteen gaze cells, pause/resume, native and enlarged scale, and absence of page errors or failed local requests.
+Source extraction and final encoding were checked for complete poses, alpha bounds, unique frames and exact decoded equality. Transparent animated WebP masters have 60 frames with 16/17 ms delays totaling 1000 ms. Public GIF previews sample 50 of those frames at 20 ms each, preserving the one-second action cycle. GIFs are not labeled 60 fps.
 
-## Measured motion properties
+The new poses and glitches were generated with OpenAI's built-in image generator. Assembly applies uniform source calibration, a common fit, head/body registration and authored whole-pose hover or levitation placement. No face/body warps, optical-flow in-betweens, crossfades or code-drawn glitch art were used.
 
-The validator reports an idle foot/base baseline of 202 px. Jump baselines are `[202, 193, 164, 202, 202]`, giving 38 px of lift and zero final landing difference. These are visible-pixel geometric measurements; they do not claim motion-capture accuracy.
+The measured body lift is approximately 12.56 px. The lift's body anchor differs from idle by approximately 0.62 px on entry and 0.97 px on return. Curled legs change the lowest foot pixel by 7 px; this floating character has no fixed floor baseline. These are visible-pixel measurements, not motion-capture data.
 
-The maximum horizontal look-center displacement from idle is 6.5 px. The widest/narrowest look silhouette ratio is approximately 1.054. These are bounds-based consistency measures, not proof of semantic direction on their own.
+The coordinator inspected source and final encoded samples, directional gestures, glitch-before/during/after samples, the lift transition and all sixteen retained gaze poses. The owner subsequently tried the revision and accepted its appearance. This is coordinator self-review plus owner feedback, not independent review. Some frame-to-frame drawing variation remains.
 
-## Retained review warnings
+## Reproducible package checks
 
-The final quality report is `ok: true` with no errors. It retains reviewed warnings:
+`python3 scripts/build_release.py` uses Pillow to build the install-only ZIP and refresh the checksums, current GIF inventory and verification report. `python3 scripts/verify_assets.py` verifies both the native release and preserved legacy files.
 
-- Intermediate directions 022.5, 045, 157.5, 202.5 and 337.5 have subtle axis cues.
-- Isolated transparent interior-row measurements occur in 180 and 247.5. They did not meet the hard multi-row material-hole failure rule.
-- Continuity difference outliers occur at 067.5→090 and the row/wrap boundaries 157.5→180 and 337.5→000.
+The native checks read the actual atlas and verify geometry, alpha bounds, all 540 unique action cells, exact original gaze retention, empty unused cells, manifest paths/indices/fps/loops/fallbacks and GIF frame durations. Six negative controls deliberately supply invalid fps, indices, geometry, missing states, duplicate indices and invalid fallbacks; each must fail. The ZIP passes CRC and exact entry-hash comparisons and contains only the four installation files.
 
-These warnings are disclosed rather than rewritten as a zero-warning claim. The labeled sheet, ordered loop, actual numeric reports and accepted visuals remain available for inspection.
+The whole-repository check also verifies local documentation links, all published checksums and absence of machine-local paths or known secret patterns. See [native validation](../qa/native-validation.json), [provenance](../qa/native-provenance.json) and [checksums](../SHA256SUMS.txt).
 
-## Portable evidence
+## Compatibility and evidence limits
 
-The reports under `qa/` retain measured results while replacing machine-local file labels with repository-relative names. They are portable copies of the recorded evidence, not an assertion that their original generating tools are vendored here. The original bundled Pets validators remain part of their installed plugin distribution.
+The owner reported a working-looking desktop trial; the exact client version was not supplied. No instrumented desktop FPS, resource use or input-latency measurement was made. Configuring 60 fps and verifying encoded timelines does not establish a device's displayed frame cadence.
 
-`scripts/verify_assets.py` checks the distributed bytes, cell occupancy, transparent unused cells, the lossless V1 crop, metadata, media properties/checksums and local documentation links. It does not replace the original semantic/art review or claim to measure host-app behavior.
+The known CLI format has a 256-cell limit and cannot accept this larger atlas. The managed ChatGPT Pets upload uses a different fixed format. This package targets Codex desktop builds that accept its custom animation tracks; it is not a universal CLI or managed-upload package. No application binary, validator or guard was patched.
 
-## Performance limits
+The sixteen gaze drawings remain in the atlas, but native pointer mapping and 60 fps gaze interpolation are not verified. Discrete gaze artwork does not imply continuous 3D tracking.
 
-Playback durations, encoded sizes, geometry and media properties are measured. No host CPU/RAM, input latency, ChatGPT overlay FPS or platform-wide resource benchmark was recorded. The browser recording demonstrates the supplied player, not an installed pet's behavior in every client. Sixteen discrete look poses do not imply continuous 3D tracking.
+## Preserved v1.0.0 material
+
+The original [PNG](../assets/capri.png) and its v1 compatibility crop remain unchanged, as does the historical v1.0.0 release. Root `metadata.json`, the older browser preview and the original QA reports describe that earlier artwork. Their fixed-format Pets preflight and older motion measurements do not validate this new native atlas.

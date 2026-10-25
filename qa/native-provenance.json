@@ -1,0 +1,36 @@
+{
+  "generator": "OpenAI built-in image generator",
+  "selected_source_sha256": {
+    "idle": "8e669a1d4793a3f22a5fc6fdbc289bc2bc394473ee39236a09d04464d873e411",
+    "running-right": "ad34537d03d0b0c3baf2482528b24b7f0a965e5fd004cf4d025e0697fcd93c99",
+    "running-left": "9b03d64231f0c1291e96dad14feb167482ae36eb7703ec8ad00372c8da7492de",
+    "waving": "7cca68510d6d351155ffee45bbc190783c197bd42e2802807ad4fc8c762000e0",
+    "jumping": "84e23e5301a8a567e8d3a500c186b81b2fda4e8c6dd2e6d5e8f2cce3629ec1c9",
+    "failed": "f15f02549b46d8145496b3862c6450bc6fec693220a2615af74e00357109256e",
+    "waiting": "8d7acd5fa4c10ce6cd1145aad9121e799616d920f992fa1ad095ca918320a63f",
+    "running": "2846a6a6e53cc0914738b0ecaf4a5fce8c4305ddadb9fd16d63c38437710080f",
+    "review": "5a93e6e03208432b8ac36608d99174bb3bc0ed1cada00afcb81030c7652364d2"
+  },
+  "selected_source_versions": {
+    "idle": 1,
+    "running-right": 1,
+    "running-left": 3,
+    "waving": 2,
+    "jumping": 3,
+    "failed": 2,
+    "waiting": 3,
+    "running": 3,
+    "review": 2
+  },
+  "assembly": "Uniform source calibration/common fit and tracked head/body registration, with authored whole-pose hover and shallow levitation. No face/body warps, optical flow or procedural glitch art.",
+  "gaze": "Sixteen original gaze drawings retained pixel-exact; pointer runtime mapping is unverified.",
+  "review": "Coordinator self-review of source/final cells and owner visual acceptance; not independent review.",
+  "owner_trial": "Owner reported successful-looking trial on 2026-10-25; exact client version and instrumented frame cadence were not supplied.",
+  "body_lift_px": 12.556243507453956,
+  "body_entry_delta_px": 0.6161619511159933,
+  "body_return_delta_px": 0.9738533699092662,
+  "foot_return_variation_px": 7,
+  "floating_alignment": "Body/head anchor returns to idle; curled legs do not establish a fixed floor baseline.",
+  "native_actual_fps_measured": false,
+  "cli_256cell_limit_compatible": false
+}
