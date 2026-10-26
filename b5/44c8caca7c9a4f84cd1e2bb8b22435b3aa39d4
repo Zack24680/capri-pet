@@ -1,0 +1,54 @@
+scripts/verify_native.py
+  s_53ba6c04369d80::t_d596a1e5db3f17 42,70-82,113-114,123
+  s_53ba6c04369d80::t_f187db69848898 35,65-69,93,96-99,104,107-108,110,117-122,124-126,138-140
+docs/validation.md
+  s_53ba6c04369d80::t_326716165600ed 3,5,8-12,14,16,18,20,22,24,26,28,30,32,34,36,38
+README.md
+  s_53ba6c04369d80::t_f187db69848898 5,9-10,21,43,49
+scripts/build_release.py
+  s_53ba6c04369d80::t_f187db69848898 26,30,44
+RELEASE_NOTES.md
+  s_53ba6c04369d80::t_207d38693777b8 1,3,5,7,9,11
+SHA256SUMS.txt
+  s_53ba6c04369d80::t_9ba93b2b6418fb 2-3,6-12,14-24,64-69,72-73,76
+capri/CHECKSUMS.sha256
+  s_53ba6c04369d80::t_d305b3b3fe697b 1-3
+capri/README.txt
+  s_53ba6c04369d80::t_13d430c5156aa7 1,9-11,13-17,19-20,23-24
+capri/pet.json
+  s_53ba6c04369d80::t_0f00c45a7e0209 4
+docs/character-and-motion.md
+  s_53ba6c04369d80::t_7ededa1caf4411 19,21,23,29,31,35
+docs/media-inventory.md
+  s_53ba6c04369d80::t_060d29db979ebb 3,7-17
+qa/native-browser-playback.json
+  s_53ba6c04369d80::t_1c5421ed2d3dde 1-34
+qa/native-color-provenance.json
+  s_53ba6c04369d80::t_decd0286efa1e5 1-12257
+qa/native-frame-hashes.json
+  s_53ba6c04369d80::t_4e75a29a41c54a 1-563
+qa/native-media-inventory.json
+  s_53ba6c04369d80::t_bc8970e5c7cdbd 5-6,13,17-18,25,29-30,37,41-42,49,53-54,61,65-66,73,77-78,85,89-90,97,101-102,109,113-114,121-133
+qa/native-provenance.json
+  s_53ba6c04369d80::t_34fd3f2884ad1b 2,4-5,7-18,20-27,29-30
+qa/native-validation.json
+  s_53ba6c04369d80::t_e937962a3334d9 3-5,15-16,29-30,37,41-42,49,53-54,61,65-66,73,77-78,85,89-90,97,101-102,109,113-114,121,125-126,133,137-138,145-157
+release.json
+  s_53ba6c04369d80::t_88a59e7342f28f 2,7,40-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b544c8caca7c9a4f84cd1e2bb8b22435b3aa39d4",
+  "prompts": {},
+  "sessions": {
+    "s_53ba6c04369d80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16ca3-f0f0-70f3-8fa4-3705852d285e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zack24680 <193324477+Zack24680@users.noreply.github.com>"
+    }
+  }
+}
