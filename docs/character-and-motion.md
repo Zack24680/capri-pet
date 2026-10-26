@@ -16,20 +16,20 @@ The owner supplied three screenshots and two YouTube videos. The earlier visual 
 
 Capri combines self-assurance, teasing amusement, impatience and curiosity. A grin is one expression rather than a claim that she is always cheerful. The pet expresses this through small gestures and graphic eye/mouth changes; it does not configure dialogue, voice or session-driven speech bubbles.
 
-The approved adaptation keeps broad rounded hot-pink curls, violet edge accents, green face/patches, black eye surrounds, blue-white disk eyes, a single flat white mouth glyph and a tiny supple black/green body. It avoids rigid armor, hard anatomy, divided teeth and persistent loose particles.
+The adaptation uses broad rounded hot-pink curls, violet edge accents, green face/patches, black eye surrounds, blue-white disk eyes, a single flat white mouth glyph and a tiny supple body with a large pink torso/hip motif, asymmetric green/pink limbs and intentional dark breaks. It avoids rigid armor, hard anatomy, divided teeth and persistent loose particles.
 
-## v2.0.0 motion
+## v2.1.0 colors and motion
 
-All nine actions were reauthored with 60 distinct generated poses per one-second cycle. Left and right travel were drawn separately to preserve asymmetric details. The character remains suspended: limbs curl and trail, wrists change direction softly and the head makes restrained adjustments.
+All nine actions use 60 distinct generated poses per one-second cycle. Version 2.1.0 corrects the body colors throughout those actions and all sixteen gaze poses, using the [Capri reference page](https://cyberpunk.fandom.com/wiki/Capri) and its episode-attributed full-body/daylight images. This is a rounded fan adaptation; the study does not establish an official numeric palette or a production turnaround. Left and right travel were drawn separately to preserve asymmetric details. The character remains suspended: limbs curl and trail, wrists change direction softly and the head makes restrained adjustments.
 
 Idle is a quiet hover and small glance. Greeting uses a short wrist flourish and asymmetric wink. Input holds an expectant palm; active work brings the hands toward the chest for focused manipulation. Review uses a cheek gesture with narrowed eyes. The lift is shallow levitation without a crouch, push-off or landing impact. Failure compresses the expression into a stronger glitch and then recovers.
 
 Most actions have a brief colored offset in a curl or eye contour. The greeting emphasizes a digital wink/glyph snap. The disrupted frames remain short and return to a clean pose. These accents are authored interpretations; their precise timing is not recovered from the reference video.
 
-Uniform fitting and tracked body/head registration remove source contact-sheet layout drift. A small hover and 12 px levitation path are authored during assembly using whole-pose positioning. The generated drawings supply the pose changes and glitch artwork; code does not invent extra facial or limb drawings.
+Uniform fitting and tracked body/head registration remove source contact-sheet layout drift. Whole-pose placement follows the earlier small hover and shallow levitation path. The generated drawings supply the pose changes and glitch artwork; code does not invent extra facial or limb drawings.
 
-The original sixteen gaze drawings are preserved exactly. Their eye graphics and small face/head changes remain an adaptation for readability. Pointer-driven use of those cells is not verified for this native package.
+The sixteen gaze drawings have corrected body colors and retain their original angular order. Their eye graphics and small face/head changes remain an adaptation for readability. Pointer-driven use of those cells is not verified for this native package.
 
 ## What the previews establish
 
-The GIFs show the actual released action cells at the same one-second cycle speed, sampled at 50 fps. The pet manifest uses all 60 frames at 60 fps. Local verification establishes the asset contents and configuration. Owner feedback establishes visual acceptance after a trial; it is not an instrumented frame-rate or compatibility benchmark. See [validation](validation.md) for the measured checks and limits.
+The GIFs show the actual released action cells at the same one-second cycle speed, sampled at 50 fps. The pet manifest uses all 60 frames at 60 fps. Local verification establishes the asset contents and configuration. The owner accepted an earlier motion trial. This color revision has coordinator self-review and local checks; it has not been tried in the owner's desktop app. Neither result is an instrumented frame-rate or compatibility benchmark. See [validation](validation.md) for the measured checks and limits.

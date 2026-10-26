@@ -1,7 +1,7 @@
 {
   "id": "capri",
   "displayName": "Capri",
-  "description": "A rounded, weightless digital imp with fluid gestures and brief glitch expressions.",
+  "description": "A rounded, weightless digital imp with pink torso, asymmetric green/pink limbs, fluid gestures and brief glitch expressions.",
   "spritesheetPath": "spritesheet.webp",
   "frame": {
     "width": 192,

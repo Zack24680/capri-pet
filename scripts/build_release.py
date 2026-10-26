@@ -23,11 +23,11 @@ def build():
     (ROOT / 'qa/native-validation.json').write_text(json.dumps(result, indent=2) + '\n')
     (ROOT / 'qa/native-media-inventory.json').write_text(json.dumps({'media': result['gifs']}, indent=2) + '\n')
     lines = ['# Current GIF inventory', '',
-             'These v2.0.0 GIFs show the released action cells at the same one-second cycle speed. Each uses 50 frames at 20 ms, for 50 fps. The native pet tracks use all 60 action frames at a configured 60 fps.', '',
+             'These v2.1.0 GIFs show the corrected release artwork. Action previews use 50 frames at 20 ms, preserving the native one-second cycle; native tracks use all 60 frames at a configured 60 fps. The separate gaze preview cycles through sixteen discrete poses over two seconds using 120/130 ms delays.', '',
              '| File | Bytes | Dimensions | Timing |', '| --- | ---: | --- | --- |']
     for item in result['gifs']:
         width, height = item['dimensions']
-        lines.append(f"| [{Path(item['file']).name}](../{item['file']}) | {item['bytes']:,} | {width} × {height} | 50 frames / 1.00 s |")
+        lines.append(f"| [{Path(item['file']).name}](../{item['file']}) | {item['bytes']:,} | {width} × {height} | {item['frames']} frames / {item['duration_ms']/1000:.2f} s |")
     lines += ['', 'The install ZIP contains only the native pet folder: manifest, lossless atlas, instructions and checksums. Historical v1.0.0 media elsewhere in the repository describes the earlier artwork.', '']
     (ROOT / 'docs/media-inventory.md').write_text('\n'.join(lines))
     checksums = ROOT / 'SHA256SUMS.txt'
@@ -41,7 +41,7 @@ def build():
     expected = {f'capri/{p.name}': sha(p) for p in native_files}
     with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_STORED) as archive:
         for path in native_files:
-            entry = zipfile.ZipInfo(f'capri/{path.name}', date_time=(2026, 10, 25, 0, 0, 0))
+            entry = zipfile.ZipInfo(f'capri/{path.name}', date_time=(2026, 10, 26, 0, 0, 0))
             entry.create_system = 3
             entry.external_attr = 0o100644 << 16
             archive.writestr(entry, path.read_bytes())

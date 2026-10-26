@@ -1,0 +1,34 @@
+{
+  "purpose": "Actual encoded GIF advancement and native WebP decoding in isolated Chrome; not a desktop-overlay recording or native FPS benchmark",
+  "page_errors": [],
+  "failed_requests": [],
+  "gifs": [
+    {
+      "file": "media/60fps/all-actions.gif",
+      "sha256": "4fbc588f7261469b24f2b7d97bda7970c2308e6cd974dace33ffae70ceec4ba5",
+      "dimensions": [
+        576,
+        696
+      ],
+      "distinct_screenshot_samples": 11,
+      "samples": 12
+    },
+    {
+      "file": "media/60fps/gaze.gif",
+      "sha256": "6bf590bb8f47e52d89b45072e5ba7012e93f665e0cfb276bd69a61915c7113ae",
+      "dimensions": [
+        384,
+        416
+      ],
+      "distinct_screenshot_samples": 11,
+      "samples": 12
+    }
+  ],
+  "atlas": {
+    "complete": true,
+    "width": 3072,
+    "height": 7280
+  },
+  "atlas_sha256": "5033ea3eb81c73463275c44b26fba64cc247e793fd7c708f55983dfb3cf54e40",
+  "owned_browser_closed": true
+}

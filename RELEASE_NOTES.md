@@ -1,15 +1,11 @@
-# Capri v2.0.0 — 60 fps motion and glitch expressions
+# Capri v2.1.0 — corrected body colors
 
-**[Download capri-60fps.zip](https://github.com/Zack24680/capri-pet/releases/download/v2.0.0/capri-60fps.zip)**
+Restores Capri's pink torso, waist and hips, asymmetric green/pink limb blocks, dark breaks, violet edges and pink-area flecks across all 540 action frames and 16 gaze poses. Her rounded curls, suspended movement, separate left/right glides and brief glitch expressions remain.
 
-All nine actions now have 60 distinct poses over one second, configured at 60 fps. Capri uses calmer suspended movement, loose wrists and limbs, small expressions and brief contained glitches. The lift is shallow levitation; failure has a stronger disruption followed by recovery. Her approved rounded pink-and-green appearance is retained.
+All nine actions retain 60 distinct drawings over one second, configured at 60 fps. The download is an install-only Codex pet folder with manifest, lossless atlas, instructions and checksums. The README showcases the actual release artwork with GIFs at the same cycle speed.
 
-Extract the included `capri` folder into your Codex pets folder, refresh **Settings > Pets**, and select Capri. Back up an existing installation before replacing it; see the [installation and upgrade instructions](https://github.com/Zack24680/capri-pet#install-in-codex).
+Extract the included `capri` folder into your Codex pets folder and refresh **Settings > Pets**. Back up an existing installation first; see the [installation instructions](https://github.com/Zack24680/capri-pet#install-in-codex).
 
-This is a native manifest-and-atlas package, replacing the old single-PNG installation format. It contains proper per-state tracks, not the temporary nine-second diagnostic tour. The owner reported that the trial looked good. Configured 60 fps is not an instrumented measurement of desktop playback, and the larger atlas may not work in every client. Pointer mapping for the sixteen retained gaze drawings is unverified.
+Local checks cover source provenance, all 556 occupied atlas cells, frame uniqueness, bounds, exact lossless master/atlas pixels, manifest semantics, GIF timing, browser advancement, negative controls and archive integrity. This color revision has not been installed in the owner's desktop app; configured 60 fps is not a runtime FPS measurement. Gaze pointer mapping remains unverified.
 
-The [README](https://github.com/Zack24680/capri-pet) showcases the new motion with GIFs. They use 50 samples per second at the same action speed. The install download contains only `pet.json`, `spritesheet.webp`, `README.txt` and checksums.
-
-Local checks verify 540 distinct action frames, exact retention of sixteen original gaze cells, transparent unused cells, all track indices and timing, GIF durations, negative configuration controls and archive integrity. See [validation](https://github.com/Zack24680/capri-pet/blob/main/docs/validation.md).
-
-The historical [v1.0.0 release](https://github.com/Zack24680/capri-pet/releases/tag/v1.0.0) remains unchanged.
+The historical [v2.0.0](https://github.com/Zack24680/capri-pet/releases/tag/v2.0.0) and [v1.0.0](https://github.com/Zack24680/capri-pet/releases/tag/v1.0.0) releases remain unchanged for rollback. See [validation](https://github.com/Zack24680/capri-pet/blob/main/docs/validation.md) for evidence and limits.
