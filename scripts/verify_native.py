@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from PIL import Image
+from native_atlas import open_atlas
 
 ROOT = Path(__file__).resolve().parents[1]
 STATES = ['idle', 'running-right', 'running-left', 'waving', 'jumping',
@@ -30,9 +31,30 @@ def validate_manifest(manifest):
         assert track['loop'] is (state not in ONCE), state
 
 
+def validate_preservation(hashes, contract):
+    expected_indices = set(range(60)) | set(range(180, 556))
+    prior = contract['unchanged_cell_rgba_sha256']
+    assert {int(index) for index in prior} == expected_indices
+    assert contract['previous_version'] == '2.1.0'
+    assert contract['previous_commit'] == 'b544c8caca7c9a4f84cd1e2bb8b22435b3aa39d4'
+    for index, expected in prior.items():
+        assert hashes[int(index)] == expected, index
+
+
+def color_counts(frame):
+    green = blue = pink = 0
+    for r, g, b, a in frame.getdata():
+        if a <= 128:
+            continue
+        green += g > 140 and r < 100 and b < 180
+        blue += b > 150 and b > r * 1.5 and g > 50 and r < 80
+        pink += r > 180 and g < 100 and b > 30
+    return {'green': green, 'blue': blue, 'pink': pink}
+
+
 def verify_native():
     release = json.loads((ROOT / 'release.json').read_text())
-    assert release['version'] == '2.1.0'
+    assert release['version'] == '2.2.0'
     assert (release['format'], release['installFolder'], release['manifest'], release['atlas']) == (
         'codex-desktop-custom-tracks', 'capri', 'capri/pet.json', 'capri/spritesheet.webp')
     assert release['actionStates'] == STATES
@@ -40,6 +62,7 @@ def verify_native():
     assert release['gazeCells'] == list(range(540, 556))
     assert release['gazePointerMappingVerified'] is False
     assert release['bodyColorsCorrected'] is True and release['gazeColorsCorrected'] is True
+    assert release['lightningStates'] == ['running-right', 'running-left']
     manifest = json.loads((ROOT / 'capri/pet.json').read_text())
     validate_manifest(manifest)
     negative = {}
@@ -78,30 +101,51 @@ def verify_native():
         assert [cell['rgba_sha256'] for cell in source_cells] == expected_cells[start:start + count]
         for cell in source_cells:
             assert cell['source_sha256'] == source_summary['selected_source_sha256'][cell['asset']]
-            assert cell['asset'] == state or (state in {'idle', 'running-right'} and cell['asset'] == 'border-repair')
+            allowed = {'self-lightning', 'electric-bridge-v2'} if state == 'running-right' else {state}
+            if state == 'idle':
+                allowed.add('border-repair')
+            assert cell['asset'] in allowed
             assert cell['scale'] > 0 and isinstance(cell['source_index'], int)
-    with Image.open(path) as encoded:
-        assert encoded.n_frames == 1 and encoded.size == (3072, 7280)
-        atlas = encoded.convert('RGBA')
     hashes = []
-    for index in range(560):
-        x, y = index % 16 * 192, index // 16 * 208
-        cell = atlas.crop((x, y, x + 192, y + 208))
-        alpha = cell.getchannel('A')
-        if index >= 556:
-            assert alpha.getextrema() == (0, 0), index
-        else:
-            box = alpha.getbbox()
-            assert box and box[0] > 0 and box[1] > 0 and box[2] < 192 and box[3] < 208, index
-            cell_hash = hashlib.sha256(cell.tobytes()).hexdigest()
-            assert cell_hash == expected_cells[index], index
-            hashes.append(cell_hash)
+    measurements = {state: [] for state in release['lightningStates']}
+    with open_atlas(path) as atlas:
+        for index in range(560):
+            x, y = index % 16 * 192, index // 16 * 208
+            cell = atlas.crop((x, y, x + 192, y + 208))
+            alpha = cell.getchannel('A')
+            if index >= 556:
+                assert alpha.getextrema() == (0, 0), index
+            else:
+                box = alpha.getbbox()
+                assert box and box[0] > 0 and box[1] > 0 and box[2] < 192 and box[3] < 208, index
+                cell_hash = hashlib.sha256(cell.tobytes()).hexdigest()
+                assert cell_hash == expected_cells[index], index
+                hashes.append(cell_hash)
+                if 60 <= index < 180:
+                    state = 'running-right' if index < 120 else 'running-left'
+                    measurements[state].append(color_counts(cell))
+    contract = json.loads((ROOT / 'qa/lightning-integration.json').read_text())
+    assert contract['version'] == release['version']
+    assert digest(ROOT / 'capri/pet.json') == contract['unchanged_manifest_sha256']
+    validate_preservation(hashes, contract)
+    invalid = hashes.copy()
+    invalid[0] = '0' * 64
+    try:
+        validate_preservation(invalid, contract)
+    except AssertionError:
+        preservation_negative = 'rejected'
+    else:
+        raise AssertionError('Changed unrelated cell accepted')
+    for state, colors in measurements.items():
+        red = [i for i, item in enumerate(colors) if item['green'] < 2 and item['blue'] < 2 and item['pink'] > 1000]
+        assert red == contract['phases'][state]['full_red_frames'] and len(red) >= 6
+        assert all(colors[i]['green'] >= 20 and colors[i]['blue'] >= 5 for i in [0, 59])
     assert len(set(hashes[:540])) == 540 and len(set(hashes[540:])) == 16
     for position, state in enumerate(STATES):
         assert len(set(hashes[position * 60:(position + 1) * 60])) == 60, state
 
     gifs = []
-    for name in STATES + ['all-actions', 'gaze']:
+    for name in STATES + ['all-actions', 'gaze', 'lightning-directions']:
         gif_path = ROOT / f'media/60fps/{name}.gif'
         with Image.open(gif_path) as gif:
             count, delay = (16, 125) if name == 'gaze' else (50, 20)
@@ -120,7 +164,8 @@ def verify_native():
     browser = json.loads((ROOT / 'qa/native-browser-playback.json').read_text())
     assert browser['atlas_sha256'] == digest(path)
     assert browser['owned_browser_closed'] and not browser['page_errors'] and not browser['failed_requests']
-    assert {item['file'] for item in browser['gifs']} == {'media/60fps/all-actions.gif', 'media/60fps/gaze.gif'}
+    assert {item['file'] for item in browser['gifs']} == {
+        f'media/60fps/{name}.gif' for name in ['all-actions', 'gaze', 'running-left', 'running-right', 'lightning-directions']}
     for item in browser['gifs']:
         assert item['distinct_screenshot_samples'] > 3
         assert item['sha256'] == digest(ROOT / item['file'])
@@ -138,6 +183,8 @@ def verify_native():
             'action_states': 9, 'unique_action_cells': len(set(hashes[:540])), 'frames_per_action': 60,
             'configured_fps': 60, 'action_cycle_ms': 1000, 'gaze_cells_corrected': 16,
             'all_556_cells_match_assembly_hashes': True,
+            'unchanged_other_occupied_cells': 436, 'lightning_states': release['lightningStates'],
+            'unrelated_cell_negative_control': preservation_negative,
             'unused_cells_transparent': 4, 'negative_controls': negative, 'gifs': gifs,
             'native_fps_measured': False, 'pointer_mapping_verified': False,
             'cli_256_cell_contract_compatible': False}

@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "version": "2.1.0",
-  "atlas_sha256": "5033ea3eb81c73463275c44b26fba64cc247e793fd7c708f55983dfb3cf54e40",
-  "atlas_bytes": 17221638,
+  "version": "2.2.0",
+  "atlas_sha256": "4d505451682db28fdcad641a4a8489676ca1d63853ddb731cd2d95dde46e41ff",
+  "atlas_bytes": 17389670,
   "atlas_size": [
     3072,
     7280
@@ -14,6 +14,12 @@
   "action_cycle_ms": 1000,
   "gaze_cells_corrected": 16,
   "all_556_cells_match_assembly_hashes": true,
+  "unchanged_other_occupied_cells": 436,
+  "lightning_states": [
+    "running-right",
+    "running-left"
+  ],
+  "unrelated_cell_negative_control": "rejected",
   "unused_cells_transparent": 4,
   "negative_controls": {
     "fps": "rejected",
@@ -38,8 +44,8 @@
     },
     {
       "file": "media/60fps/running-right.gif",
-      "bytes": 1689312,
-      "sha256": "f813516f1234adffddf9ea1fce1d1c46575431f45220fc7f6aedeb3a9a8c8464",
+      "bytes": 1383009,
+      "sha256": "8c20a4b74997629818986831407c4434864e18e4b8cb32ac559e840939bfaf13",
       "dimensions": [
         384,
         416
@@ -50,8 +56,8 @@
     },
     {
       "file": "media/60fps/running-left.gif",
-      "bytes": 1527522,
-      "sha256": "4e1ca2394b36d37d494081e5045a2a1fca9b77aa9ca0f9c2c6d3ae6ad8ff56c7",
+      "bytes": 1446113,
+      "sha256": "2c8d58c4e1b81062b1f663cf6fa72c6e793f6e83703ea47485913fb0066f9ade",
       "dimensions": [
         384,
         416
@@ -134,8 +140,8 @@
     },
     {
       "file": "media/60fps/all-actions.gif",
-      "bytes": 4262206,
-      "sha256": "4fbc588f7261469b24f2b7d97bda7970c2308e6cd974dace33ffae70ceec4ba5",
+      "bytes": 4105086,
+      "sha256": "679ec3544ba6a3d64d1e5248ae82f4f4b4d61b5105f810119d0a44152f796781",
       "dimensions": [
         576,
         696
@@ -155,6 +161,18 @@
       "frames": 16,
       "duration_ms": 2000,
       "fps": 8.0
+    },
+    {
+      "file": "media/60fps/lightning-directions.gif",
+      "bytes": 2778791,
+      "sha256": "a0128743b9fe330f529020e7c2e8a7851f6b7c284394c2b662aceff7aa8d89d6",
+      "dimensions": [
+        768,
+        446
+      ],
+      "frames": 50,
+      "duration_ms": 1000,
+      "fps": 50.0
     }
   ],
   "native_fps_measured": false,

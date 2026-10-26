@@ -2,11 +2,11 @@
 
 A soft, rounded fan-made Capri for Codex desktop: flowing hot-pink curls, a tiny flexible body, expressive digital eyes and a mischievous grin.
 
-**[Download Capri v2.1.0 for Codex](https://github.com/Zack24680/capri-pet/releases/download/v2.1.0/capri-60fps.zip)**
+**[Download Capri v2.2.0 for Codex](https://github.com/Zack24680/capri-pet/releases/download/v2.2.0/capri-60fps.zip)**
 
-**9 actions · 60 distinct frames per action · 60 fps animation tracks · brief glitch expressions**
+**9 actions · 60 distinct frames per action · 60 fps tracks · self-lightning travel**
 
-This revision restores her pink torso and hips, asymmetric green/pink limbs, dark breaks and violet edges across every action and all sixteen gaze poses. Her rounded curls and suspended motion remain.
+During left or right travel, Capri now becomes her own smiling red-lightning form and reforms calmly. Codex chooses when those travel animations play; each contains a one-second cycle. Her corrected body colors, other seven actions and sixteen gaze poses are preserved.
 
 ![Capri's nine revised actions](media/60fps/all-actions.gif)
 
@@ -18,7 +18,7 @@ The GIF shows the full one-second action cycles at 50 fps. The installed pet's t
 2. Place the included **`capri` folder** in your Codex pets folder, usually `%USERPROFILE%\.codex\pets` on Windows. The result should be `%USERPROFILE%\.codex\pets\capri\pet.json`, with `spritesheet.webp` beside it.
 3. In Codex desktop, open **Settings > Pets**, select **Refresh**, and choose **Capri**. Use `/pet` to show her.
 
-Requires a Codex desktop build with support for custom pet animation tracks. This color revision has passed local asset and browser checks; installation in the owner's desktop app has not been tested.
+Requires a Codex desktop build with support for custom pet animation tracks. This travel revision has passed local asset and browser checks; installation in the owner's desktop app has not been tested.
 
 **Updating an existing Capri?** Back up her folder first. To preserve an existing pet ID and custom metadata, attach the ZIP in a local Codex task with access to that folder and send:
 
@@ -31,8 +31,8 @@ Capri stays suspended rather than bouncing against a floor. Small wrist movement
 | Action | Movement |
 | --- | --- |
 | Idle | Quiet hover, small glance and cheek gesture. |
-| Glide right | Right-facing lean with loose trailing limbs. |
-| Glide left | Separately drawn left-facing glide that keeps her asymmetry. |
+| Glide right | Turns into a rightward red-lightning form, then reforms. |
+| Glide left | Separately drawn leftward transformation that preserves her normal asymmetry. |
 | Greeting | A small wrist flourish and teasing digital wink. |
 | Floating lift | Shallow levitation and return, with curled legs and no grounded push-off. |
 | Failure / recovery | A stronger brief glitch, compressed expression and composed recovery. |
@@ -46,7 +46,7 @@ Each action contains 60 distinct drawings over one second. Greeting, lift, failu
 
 The download contains the native pet manifest, a transparent lossless WebP atlas, installation notes and checksums. It needs no account, API key or build step.
 
-The native format replaces the old single-PNG installation flow. [The v1.0.0 release](https://github.com/Zack24680/capri-pet/releases/tag/v1.0.0) remains available for clients using that earlier format. [Version 2.0.0](https://github.com/Zack24680/capri-pet/releases/tag/v2.0.0) preserves the previous body colors for rollback.
+The native format replaces the old single-PNG installation flow. [The v1.0.0 release](https://github.com/Zack24680/capri-pet/releases/tag/v1.0.0) remains available for clients using that earlier format. [Version 2.1.0](https://github.com/Zack24680/capri-pet/releases/tag/v2.1.0) preserves the corrected colors with the earlier glides for rollback.
 
 [Validation notes](docs/validation.md) describe the measured frame counts, timing, atlas checks and compatibility limits. [Character and motion notes](docs/character-and-motion.md) cover the references and adaptation; [media inventory](docs/media-inventory.md) lists the current GIFs.
 

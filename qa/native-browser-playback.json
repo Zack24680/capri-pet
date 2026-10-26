@@ -1,18 +1,8 @@
 {
-  "purpose": "Actual encoded GIF advancement and native WebP decoding in isolated Chrome; not a desktop-overlay recording or native FPS benchmark",
+  "purpose": "Actual encoded GIF advancement and atlas decoding in isolated Chrome; no Codex runtime benchmark",
   "page_errors": [],
   "failed_requests": [],
   "gifs": [
-    {
-      "file": "media/60fps/all-actions.gif",
-      "sha256": "4fbc588f7261469b24f2b7d97bda7970c2308e6cd974dace33ffae70ceec4ba5",
-      "dimensions": [
-        576,
-        696
-      ],
-      "distinct_screenshot_samples": 11,
-      "samples": 12
-    },
     {
       "file": "media/60fps/gaze.gif",
       "sha256": "6bf590bb8f47e52d89b45072e5ba7012e93f665e0cfb276bd69a61915c7113ae",
@@ -22,6 +12,46 @@
       ],
       "distinct_screenshot_samples": 11,
       "samples": 12
+    },
+    {
+      "file": "media/60fps/running-left.gif",
+      "sha256": "2c8d58c4e1b81062b1f663cf6fa72c6e793f6e83703ea47485913fb0066f9ade",
+      "dimensions": [
+        384,
+        416
+      ],
+      "samples": 10,
+      "distinct_screenshot_samples": 7
+    },
+    {
+      "file": "media/60fps/running-right.gif",
+      "sha256": "8c20a4b74997629818986831407c4434864e18e4b8cb32ac559e840939bfaf13",
+      "dimensions": [
+        384,
+        416
+      ],
+      "samples": 10,
+      "distinct_screenshot_samples": 9
+    },
+    {
+      "file": "media/60fps/all-actions.gif",
+      "sha256": "679ec3544ba6a3d64d1e5248ae82f4f4b4d61b5105f810119d0a44152f796781",
+      "dimensions": [
+        576,
+        696
+      ],
+      "samples": 10,
+      "distinct_screenshot_samples": 10
+    },
+    {
+      "file": "media/60fps/lightning-directions.gif",
+      "sha256": "a0128743b9fe330f529020e7c2e8a7851f6b7c284394c2b662aceff7aa8d89d6",
+      "dimensions": [
+        768,
+        446
+      ],
+      "samples": 10,
+      "distinct_screenshot_samples": 7
     }
   ],
   "atlas": {
@@ -29,6 +59,7 @@
     "width": 3072,
     "height": 7280
   },
-  "atlas_sha256": "5033ea3eb81c73463275c44b26fba64cc247e793fd7c708f55983dfb3cf54e40",
-  "owned_browser_closed": true
+  "atlas_sha256": "4d505451682db28fdcad641a4a8489676ca1d63853ddb731cd2d95dde46e41ff",
+  "owned_browser_closed": true,
+  "unchanged_gaze_receipt_reused_from": "v2.1.0"
 }

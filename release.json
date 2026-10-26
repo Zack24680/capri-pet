@@ -1,10 +1,10 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "format": "codex-desktop-custom-tracks",
   "installFolder": "capri",
   "manifest": "capri/pet.json",
   "atlas": "capri/spritesheet.webp",
-  "atlasSha256": "5033ea3eb81c73463275c44b26fba64cc247e793fd7c708f55983dfb3cf54e40",
+  "atlasSha256": "4d505451682db28fdcad641a4a8489676ca1d63853ddb731cd2d95dde46e41ff",
   "actionStates": [
     "idle",
     "running-right",
@@ -39,5 +39,9 @@
   ],
   "gazePointerMappingVerified": false,
   "bodyColorsCorrected": true,
-  "gazeColorsCorrected": true
+  "gazeColorsCorrected": true,
+  "lightningStates": [
+    "running-right",
+    "running-left"
+  ]
 }
